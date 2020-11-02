@@ -1,0 +1,296 @@
+/*区切り*/
+.content {
+  zoom: 1;
+  margin: 70px;
+}
+.content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*小見出し*/
+.head-border {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  color: darkgoldenrod;
+  font-weight: normal;
+  margin: 70px;
+}
+
+.head-border:before,
+.head-border:after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: darkgoldenrod;
+}
+
+.head-border:before {
+  margin-right: 1rem;
+}
+
+.head-border:after {
+  margin-left: 1rem;
+}
+
+/*スクロールアニメーション*/
+
+.fadein {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s;
+}
+
+.fadein.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*プロフィール文字*/
+.title-border {
+  display: flex;
+  align-items: center;
+  color: darkgoldenrod;
+  margin: 70px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.title-border:before,
+.title-border:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+.title-border:before {
+  margin-right: 1rem;
+}
+.title-border:after {
+  margin-left: 1rem;
+}
+img {
+  width: 100%;
+}
+/*top画像*/
+
+.img1 {
+  width: 100%;
+  text-align: center;
+}
+
+/*メニューバー*/
+.menu {
+  border-bottom: 1px solid #ccc;
+  margin-top: 5%;
+}
+.menu ul {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+}
+.menu ul li {
+  display: table-cell;
+  min-width: 50px;
+  border-right: 1px solid #ccc;
+}
+.menu ul li:first-child {
+  border-left: 1px solid #ccc;
+}
+.menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #aaa;
+}
+.menu ul li a:hover {
+  background-color: beige;
+  border-bottom: 6px solid rgb(201, 185, 164);
+}
+.menu ul li.current {
+  font-weight: bold;
+}
+
+/*プロフィール*/
+
+.profile {
+  display: -webkit-flex;
+  display: flex;
+  margin: 100px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.profileList {
+  font-size: 20px;
+  line-height: 1.6;
+}
+.profileList p:first-child {
+  font-size: 25px;
+  font-weight: bold;
+}
+.profileImg {
+  width: 35%;
+}
+.profileImg img {
+  border: 3px solid #23461f;
+  border-radius: 50%;
+}
+
+/*Self-pr*/
+.box {
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.6;
+  flex-wrap: wrap;
+}
+.boxContent {
+  width: 28%;
+  padding: 1.5rem;
+}
+
+.boxImg {
+  width: 70%;
+  margin: 0 auto;
+}
+.boxSubheading {
+  font-size: 25px;
+  text-align: center;
+}
+.boxColor1 {
+  background-color: #fff0f5;
+}
+.boxColor2 {
+  background-color: #afeeee;
+}
+.boxColor3 {
+  background-color: #fafad2;
+}
+
+/*Dream*/
+.dream {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 3rem;
+}
+.dreamImg {
+  width: 50%;
+  opacity: 0.5;
+}
+
+.dreamText {
+  width: 40%;
+  line-height: 1.6;
+}
+.dreamText h3 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 1rem;
+  text-shadow: 10px 10px #e6e6fa; /* 文字の影 */
+}
+.dreamSpan {
+  color: #ff7f50;
+  font-weight: bold;
+}
+
+/*Creation*/
+.slider {
+  margin: 30px auto;
+  width: 60%;
+}
+.sliderContent p {
+  padding: 30px;
+  text-align: center;
+}
+.explanation {
+  text-align: center;
+}
+
+footer {
+  background-color: burlywood;
+  padding: 30px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  /*content*/
+  .content {
+    margin: 30px;
+  }
+  .head-border {
+    padding-bottom: 30px;
+  }
+  /*タイトル*/
+  .title-border {
+    margin: 25px;
+    font-size: 30px;
+  }
+  /*メニューバー*/
+  .menu ul {
+    width: 100%;
+  }
+  .menu ul li a {
+    font-size: 14px;
+  }
+  /*about*/
+  .head-border {
+    margin: 0;
+  }
+  .profile {
+    margin: 0;
+  }
+  .profileImg {
+    width: 80%;
+    padding: 30px;
+  }
+  .profileList p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  /*self-pr*/
+
+  .boxContent {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  /*dream*/
+  .dreamImg img {
+    width: 100%;
+  }
+  .dreamImg {
+    width: 100%;
+    opacity: 0.5;
+  }
+  .dreamText {
+    line-height: 1.6;
+  }
+  .dreamText {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .dreamText h3 {
+    font-size: 18px;
+    font-weight: bold;
+    width: auto;
+    padding: 1rem;
+    text-shadow: 10px 10px #e6e6fa;
+  }
+  /*creation*/
+
+  .slider {
+    margin: 30px auto;
+    width: 100%;
+  }
+  .sliderContent p {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .explanation {
+    text-align: center;
+  }
+}
