@@ -181,7 +181,7 @@ img {
 }
 
 .dreamText {
-  width: 40%;
+  width: 100%;
   line-height: 1.6;
 }
 .dreamText h3 {
@@ -206,6 +206,14 @@ img {
 }
 .explanation {
   text-align: center;
+}
+.creationList {
+  text-align: center;
+  margin-top: inherit;
+  line-height: 1.6;
+}
+.creationList p:first-child {
+  font-weight: bold;
 }
 
 footer {
