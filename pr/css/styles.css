@@ -171,7 +171,6 @@ img {
 
 /*Dream*/
 .dream {
-  flex-wrap: wrap;
   display: flex;
   padding: 3rem;
 }
